@@ -13,10 +13,20 @@ class IndexPage extends StatefulWidget {
 int currentIndex;
 final pages = [HomePage(), MsgPage(), CartPage(), PersonPage()];
 final List<BottomNavigationBarItem> bottomNavItems = [
-  BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首页')),
-  BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('消息')),
-  BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), title: Text('购物车')),
-  BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('个人中心')),
+  BottomNavigationBarItem(
+      icon: Icon(Icons.home), backgroundColor: Colors.blue, title: Text('首页')),
+  BottomNavigationBarItem(
+      icon: Icon(Icons.message),
+      backgroundColor: Colors.blue,
+      title: Text('消息')),
+  BottomNavigationBarItem(
+      icon: Icon(Icons.shopping_cart),
+      backgroundColor: Colors.blue,
+      title: Text('购物车')),
+  BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      backgroundColor: Colors.blue,
+      title: Text('个人中心')),
 ];
 
 class _IndexPageState extends State<IndexPage> {
@@ -37,15 +47,12 @@ class _IndexPageState extends State<IndexPage> {
         bottomNavigationBar: BottomNavigationBar(
           items: bottomNavItems,
           currentIndex: currentIndex,
-          type: BottomNavigationBarType.shifting,
           //点击事件
           onTap: (index) {
             _changePage(index);
           },
         ),
-        body: pages[
-          currentIndex
-        ],
+        body: pages[currentIndex],
       ),
     );
   }
