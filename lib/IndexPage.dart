@@ -22,7 +22,7 @@ final List<BottomNavigationBarItem> bottomNavItems = [
   BottomNavigationBarItem(
       icon: Icon(Icons.shopping_cart),
       backgroundColor: Colors.blue,
-      title: Text('购物车')),
+       title: Text('购物车')),
   BottomNavigationBarItem(
       icon: Icon(Icons.person),
       backgroundColor: Colors.blue,
@@ -32,7 +32,6 @@ final List<BottomNavigationBarItem> bottomNavItems = [
 class _IndexPageState extends State<IndexPage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     currentIndex = 0;
   }
@@ -47,6 +46,7 @@ class _IndexPageState extends State<IndexPage> {
         bottomNavigationBar: BottomNavigationBar(
           items: bottomNavItems,
           currentIndex: currentIndex,
+          type: BottomNavigationBarType.fixed,
           //点击事件
           onTap: (index) {
             _changePage(index);
