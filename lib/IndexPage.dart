@@ -38,6 +38,7 @@ class _IndexPageState extends State<IndexPage> {
           items: bottomNavItems,
           currentIndex: currentIndex,
           type: BottomNavigationBarType.shifting,
+          //点击事件
           onTap: (index) {
             _changePage(index);
           },
